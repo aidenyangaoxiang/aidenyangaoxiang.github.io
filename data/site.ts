@@ -1,19 +1,18 @@
-/** Edit these values to personalize the site. Empty strings are deliberate placeholders. */
+/** Edit these values to personalize the site. Empty social profile URLs are hidden. */
 export const siteConfig = {
   name: "Aoxiang (Aiden) Yang",
   shortName: "Aiden Yang",
+  publicationAuthorName: "Aoxiang Yang",
   initials: "AY",
   role: "Undergraduate Researcher in AI",
   affiliation: "NYU Shanghai",
-  email: "", // TODO: Your email address, without mailto:
+  email: "ay2710@nyu.edu",
   githubUrl: "https://github.com/aidenyangaoxiang", // Verified authenticated GitHub account
   scholarUrl: "", // TODO: Your full Google Scholar profile URL
   linkedinUrl: "", // TODO: Your full LinkedIn profile URL
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://aidenyangaoxiang.github.io", // GitHub Pages; override for another host
   cvPath: "/Aoxiang_Yang_CV.pdf",
   cvIsPlaceholder: true, // Set false after replacing the supplied placeholder PDF
-  profileImage: "/profile.jpg", // Add your portrait to public/profile.jpg
-  profileAlt: "Portrait of Aoxiang (Aiden) Yang",
   copyrightYear: 2026,
   introduction:
     "My research interests lie broadly in multimodal learning, computer vision, and adaptive AI systems. I am particularly interested in how intelligent systems can learn from visual and multimodal information, interact with their environments, and leverage accumulated experience to improve future decisions.",

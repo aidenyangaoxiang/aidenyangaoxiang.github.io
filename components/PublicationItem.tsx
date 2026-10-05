@@ -2,6 +2,7 @@ import Link from "next/link";
 import { publicResearchLinks } from "@/data/research";
 import type { Publication } from "@/data/publications";
 import { safeExternalUrl } from "@/lib/urls";
+import { AuthorList } from "./AuthorList";
 import { Icon } from "./Icon";
 import { StatusBadge } from "./StatusBadge";
 
@@ -12,7 +13,7 @@ export function PublicationItem({ publication }: { publication: Publication }) {
     <div className="publication-content">
       <StatusBadge status={publication.status} />
       <h3 id={`publication-${publication.id}`}>{publication.title}</h3>
-      {!publication.doubleBlind && publication.authors.length > 0 && <p className="authors">{publication.authors.join(", ")}</p>}
+      {!publication.doubleBlind && publication.authors.length > 0 && <AuthorList authors={publication.authors} />}
       {publication.statusDetail ? <p className="publication-venue">{publication.statusDetail}</p> : publication.venue && <p className="publication-venue">{publication.venue}</p>}
       {publication.reviewNote && <p className="review-note"><Icon name="document" />{publication.reviewNote}</p>}
       {publication.status === "Research Project" && <Link className="research-record-link" href={`/research/#${publication.id}`}>Research overview</Link>}

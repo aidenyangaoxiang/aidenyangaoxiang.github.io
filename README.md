@@ -29,17 +29,16 @@ The CV buttons open a PDF in a new tab. The footer also links to the HTML CV pag
 
 | Item | What to change |
 | --- | --- |
-| Portrait | Add `public/profile.jpg`. The default is an intentional initials placeholder. Change `profileImage` and `profileAlt` in `data/site.ts` for another filename. |
 | CV | Replace `public/Aoxiang_Yang_CV.pdf` with your real PDF and set `cvIsPlaceholder: false` in `data/site.ts`. The supplied PDF explicitly identifies itself as a placeholder. |
 | Project figures | Add `public/projects/pave.png`, `clip-lora.png`, `memnav.png`, and `sign-language.png`. Each is optional; absent figures use conceptual diagrams without invented experimental results. Edit `image` and `imageAlt` in `data/research.ts` as needed. |
-| Email / social profiles | Fill `email`, `githubUrl`, `scholarUrl`, and `linkedinUrl` in `data/site.ts`. Empty values are deliberate placeholders and render muted labels, never broken links or empty buttons. |
+| Email / social profiles | Email is `ay2710@nyu.edu`; GitHub is configured. Edit `email`, `githubUrl`, `scholarUrl`, and `linkedinUrl` in `data/site.ts`. Empty profile URLs are hidden entirely. |
 | Research | Edit `data/research.ts`: titles, descriptions, themes, verified authors, roles, highlights, status, and optional public links. |
-| Manuscripts / publications | Edit `data/publications.ts`. Add verified year, venue, authors, public links, and BibTeX only when available. |
+| Manuscripts / publications | Edit `data/publications.ts`. Add verified year, venue, authors, public links, and BibTeX only when available. `publicationAuthorName` in `data/site.ts` identifies the author to display in bold, preserving author order. |
 | Experience / education | Edit `data/experience.ts`. Additional experiences are supported. The optional minor is empty; GPA is omitted. |
 | News | Edit `data/news.ts`. Dates are strings so a year-only entry does not acquire an invented month. |
 | Favicon | Replace `public/favicon.svg` with your preferred icon and update `app/layout.tsx` if its filename changes. |
 
-Public assets are detected at build time. Restart the development server if a newly added image is not picked up, and rebuild/redeploy after updating any content or asset.
+No portrait or portrait placeholder is displayed. Public project figures are detected at build time. Restart the development server if a newly added image is not picked up, and rebuild/redeploy after updating any content or asset.
 
 VTaMo is **accepted at ECCV 2026**, as stated in its [public arXiv record](https://arxiv.org/abs/2607.09126). Its title, author order, year, and [code repository](https://github.com/junyi2005/vtamo) are verified from that record. It leads Selected Research, the Research page, and the Accepted papers section. Its BibTeX cites the public arXiv record without inventing proceedings pages or a proceedings DOI. Research projects are ordered by status: Accepted, Published, Preprint, Under Review, then Research Project, preserving configured order within each status.
 
@@ -60,7 +59,7 @@ Official guidance: [Next.js on Vercel](https://vercel.com/docs/frameworks/full-s
 2. Use `main` as the publishing branch, or change `branches: [main]` in the workflow to match your default branch.
 3. In **Settings → Pages → Build and deployment → Source**, select **GitHub Actions**.
 4. Push to `main`, or run the workflow manually in the Actions tab. It installs dependencies, runs lint, builds the static site, checks types, and publishes `out/`.
-5. The workflow reads the real base path and origin from `actions/configure-pages`; internal page links, project images, portrait, favicon, and CV work for both a root user site and a `/repository-name` project site. Configure a custom domain in GitHub's Pages settings if desired; the same workflow reads its configured origin.
+5. The workflow reads the real base path and origin from `actions/configure-pages`; internal page links, project images, favicon, and CV work for both a root user site and a `/repository-name` project site. Configure a custom domain in GitHub's Pages settings if desired; the same workflow reads its configured origin.
 
 To verify a project-site build locally (replace `/your-repository-name` with your own path):
 
@@ -79,7 +78,7 @@ app/                 Routes, metadata, global styles
 components/          Navbar, ResearchCard, PublicationItem, timeline, social links, footer
 data/                Site configuration and structured academic content
 lib/                 Build-time asset checks and safe URL helpers
-public/              CV, portrait, favicon, project figures
+public/              CV, favicon, project figures
 .github/workflows/   GitHub Pages deployment
 .openai/hosting.json  Private Sites deployment identity (not needed by Vercel/Pages)
 ```

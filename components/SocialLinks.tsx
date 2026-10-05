@@ -9,10 +9,11 @@ export function SocialLinks({ includeCV = false, includeLinkedIn = false, compac
     { label: "GitHub", icon: "github" as const, href: safeExternalUrl(siteConfig.githubUrl) },
     { label: "Google Scholar", icon: "scholar" as const, href: safeExternalUrl(siteConfig.scholarUrl) },
     ...(includeLinkedIn ? [{ label: "LinkedIn", icon: "linkedin" as const, href: safeExternalUrl(siteConfig.linkedinUrl) }] : []),
-  ];
+  ].filter((item) => item.href);
+  if (items.length === 0) return null;
   return <ul className={`social-links ${compact ? "social-links--compact" : ""}`} aria-label="Contact and academic profiles">
     {items.map((item) => <li key={item.label}>
-      {item.href ? <a href={item.href} target={item.icon === "email" ? undefined : "_blank"} rel={item.icon === "email" ? undefined : "noopener noreferrer"}><Icon name={item.icon} />{item.label}</a> : <span className="unavailable-link" aria-disabled="true" title={`${item.label} link has not been added`}><Icon name={item.icon} />{item.label}<span className="sr-only"> (link not yet available)</span></span>}
+      <a href={item.href} target={item.icon === "email" ? undefined : "_blank"} rel={item.icon === "email" ? undefined : "noopener noreferrer"}><Icon name={item.icon} />{item.label}</a>
     </li>)}
   </ul>;
 }

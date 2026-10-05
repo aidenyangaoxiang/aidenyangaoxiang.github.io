@@ -2,6 +2,7 @@ import Image from "next/image";
 import { publicResearchLinks, type ResearchProject } from "@/data/research";
 import { hasPublicAsset } from "@/lib/assets";
 import { assetUrl, safeExternalUrl } from "@/lib/urls";
+import { AuthorList } from "./AuthorList";
 import { Icon } from "./Icon";
 import { ResearchFigure } from "./ResearchFigure";
 import { StatusBadge } from "./StatusBadge";
@@ -13,7 +14,7 @@ export function ResearchCard({ project }: { project: ResearchProject }) {
     <div className="research-content">
       <div className="research-meta"><StatusBadge status={project.status} />{project.statusDetail && <span>{project.statusDetail}</span>}{project.affiliation && <span>{project.affiliation}</span>}</div>
       <h3 id={`${project.id}-title`}>{project.title}</h3>
-      {!project.doubleBlind && project.authors.length > 0 && <p className="authors">{project.authors.join(", ")}</p>}
+      {!project.doubleBlind && project.authors.length > 0 && <AuthorList authors={project.authors} />}
       <p className="research-description">{project.description}</p>
       {project.roleNote && <p className="role-note"><strong>My role.</strong> {project.roleNote}</p>}
       {project.highlights && <p className="project-highlights">{project.highlights.join(" · ")}</p>}
