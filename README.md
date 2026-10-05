@@ -1,6 +1,6 @@
 # Aoxiang (Aiden) Yang — academic website
 
-Next.js App Router, TypeScript, and Tailwind CSS. An English academic website with Home, Research, Publications, Experience, and CV pages. The build produces a fully static `out/` directory; no database, API key, or server is required in production.
+Next.js App Router, TypeScript, and Tailwind CSS. An English academic website with Home, Research, Publications, and CV pages. Research and industry experience are included in the HTML CV. The build produces a fully static `out/` directory; no database, API key, or server is required in production.
 
 Public website: [aidenyangaoxiang.github.io](https://aidenyangaoxiang.github.io/).
 Source repository: [aidenyangaoxiang/aidenyangaoxiang.github.io](https://github.com/aidenyangaoxiang/aidenyangaoxiang.github.io).
@@ -87,4 +87,4 @@ Semantic landmarks, a skip link, visible keyboard focus, mobile navigation with 
 
 ## Validation notes
 
-Lint, TypeScript checking, and production export have passed. Browser checks cover all five pages at 1440, 768, 390, and 320 pixels; 200% text enlargement; mobile navigation and Escape; internal anchors; PDF links; omitted optional project links; and the double-blind review notice. The installed production dependencies have no npm audit findings. A full development dependency audit reports the unpatched `braces` advisory through Next.js's ESLint tooling; it is not included in the exported website. The current registry provides no patched `braces` release, so the project does not force a framework downgrade to silence that finding.
+Lint, TypeScript checking, and production export have passed. Browser checks cover all four pages at 1440, 768, 390, and 320 pixels; 200% text enlargement; mobile navigation and Escape; internal anchors; PDF links; omitted optional project links; and the double-blind review notice. The installed production dependencies have no npm audit findings. A full development dependency audit reports the unpatched `braces` advisory through Next.js's ESLint tooling; it is not included in the exported website. The current registry provides no patched `braces` release, so the project does not force a framework downgrade to silence that finding.

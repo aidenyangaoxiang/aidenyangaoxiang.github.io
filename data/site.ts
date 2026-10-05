@@ -28,5 +28,4 @@ export const navigation = [
   { label: "Home", href: "/" },
   { label: "Research", href: "/research/" },
   { label: "Publications", href: "/publications/" },
-  { label: "Experience", href: "/experience/" },
 ];

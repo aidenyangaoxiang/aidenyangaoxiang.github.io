@@ -8,5 +8,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const origin = safeExternalUrl(siteConfig.siteUrl)?.replace(/\/$/, "");
   if (!origin) return [];
   const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  return ["/", "/research/", "/publications/", "/experience/", "/cv/"].map((route) => ({ url: `${origin}${prefix}${route}` }));
+  return ["/", "/research/", "/publications/", "/cv/"].map((route) => ({ url: `${origin}${prefix}${route}` }));
 }
