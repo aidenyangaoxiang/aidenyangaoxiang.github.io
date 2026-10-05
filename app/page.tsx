@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
 import { news } from "@/data/news";
-import { researchProjects } from "@/data/research";
+import { orderedResearchProjects } from "@/data/research";
 import { SocialLinks } from "@/components/SocialLinks";
 import { ResearchCard } from "@/components/ResearchCard";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -22,7 +22,7 @@ export default function Home() {
       <section className="news-section" aria-labelledby="news-title"><SectionHeading id="news-title" title="News" /><ol className="news-list">{news.map((item) => <li key={item.text}><span className="news-date">{item.date}</span><p>{item.text}{item.projectId && <Link href={`/research/#${item.projectId}`} className="news-project-link" aria-label={`Research overview for ${item.projectId}`}>Details</Link>}</p></li>)}</ol></section>
     </div>
 
-    <section className="research-section" aria-labelledby="selected-title"><SectionHeading id="selected-title" title="Selected research" link={{ href: "/research/", label: "All research" }} /><p className="section-intro">Multimodal learning, visual understanding, and experience-driven intelligence.</p><div className="research-list">{researchProjects.filter((project) => project.selected).map((project) => <ResearchCard key={project.id} project={project} />)}</div></section>
+    <section className="research-section" aria-labelledby="selected-title"><SectionHeading id="selected-title" title="Selected research" link={{ href: "/research/", label: "All research" }} /><p className="section-intro">Multimodal learning, visual understanding, and experience-driven intelligence.</p><div className="research-list">{orderedResearchProjects.filter((project) => project.selected).map((project) => <ResearchCard key={project.id} project={project} />)}</div></section>
 
     <section className="home-education" aria-labelledby="education-title"><SectionHeading id="education-title" title="Education" /><Education /></section>
   </>;

@@ -41,7 +41,9 @@ The CV buttons open a PDF in a new tab. The footer also links to the HTML CV pag
 
 Public assets are detected at build time. Restart the development server if a newly added image is not picked up, and rebuild/redeploy after updating any content or asset.
 
-PAVE is explicitly **under review at ICLR 2027**. Both its research and publication records have `doubleBlind: true`: authors, manuscript/code/project URLs, and BibTeX remain suppressed even if accidentally populated. Do not add submission identifiers or anonymous assets to `public/`, data files, or this repository. After review restrictions end, deliberately update both records and provide verified public information. The other three works are **Research Project** records, never inferred publications. Published, Preprint, Under Review, and Research Project have distinct status styles.
+VTaMo is **accepted at ECCV 2026**, as stated in its [public arXiv record](https://arxiv.org/abs/2607.09126). Its title, author order, year, and [code repository](https://github.com/junyi2005/vtamo) are verified from that record. It leads Selected Research, the Research page, and the Accepted papers section. Its BibTeX cites the public arXiv record without inventing proceedings pages or a proceedings DOI. Research projects are ordered by status: Accepted, Published, Preprint, Under Review, then Research Project, preserving configured order within each status.
+
+PAVE is explicitly **under review at ICLR 2027**. Both its research and publication records have `doubleBlind: true`: authors, manuscript/code/project URLs, and BibTeX remain suppressed even if accidentally populated. Do not add submission identifiers or anonymous assets to `public/`, data files, or this repository. After review restrictions end, deliberately update both records and provide verified public information. CLIP LoRA and MemNav remain **Research Project** records. Accepted, Published, Preprint, Under Review, and Research Project have distinct status styles.
 
 ## Deploy to Vercel
 

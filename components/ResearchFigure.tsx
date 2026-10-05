@@ -4,7 +4,7 @@ export function ResearchFigure({ id }: { id: string }) {
     pave: { top: "PAVE", bottom: "Persistent visual experience", blocks: ["Past interactions", "Experience retrieval", "Visual-token selection", "Frozen action model"] },
     "clip-lora": { top: "CLIP + LoRA", bottom: "Robust representation adaptation", blocks: ["CLIP representations", "Few-shot LoRA", "Representation fusion", "Distribution robustness"] },
     memnav: { top: "IMAGE-GOAL NAVIGATION", bottom: "Simulation · integration · experiments", blocks: ["Goal image", "Perception", "Navigation & planning", "Simulated environment"] },
-    "sign-language": { top: "VISION–TEXT ALIGNMENT", bottom: "Cross-modal correspondence", blocks: ["Visual sign sequences", "Optimal Transport", "Alignment", "Language representations"] },
+    "sign-language": { top: "VTAMO · ECCV 2026", bottom: "Cross-modal correspondence", blocks: ["Visual sign sequences", "Optimal Transport", "Alignment", "Language representations"] },
   };
   const figure = labels[id];
   if (!figure) return <div className="figure-fallback">Research figure forthcoming</div>;

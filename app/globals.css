@@ -95,6 +95,7 @@ ul, ol { padding: 0; margin: 0; }
 .status-badge { font-size: .75rem; display: inline-flex; padding: 2px 8px; border: 1px solid #dedce4; border-radius: 3px; background: #f7f7f9; color: #65616c; white-space: nowrap; line-height: 1.65; }
 .status-badge--review { background: #f3eef9; border-color: #e3d6ef; color: #634180; }
 .status-badge--published { background: #edf5f1; border-color: #d5e4dc; color: #365f4b; }
+.status-badge--accepted { background: #eaf4ef; border-color: #cbded4; color: #2f6046; font-weight: 600; }
 .status-badge--preprint { background: #eef3fa; border-color: #d7e2ef; color: #42658d; }
 .research-content h3 { font-size: 1.1875rem; font-weight: 600; letter-spacing: -.015em; line-height: 1.45; margin-bottom: 10px; }
 .research-description { font-size: 1rem; color: #53535c; line-height: 1.8; }

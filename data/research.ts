@@ -1,4 +1,5 @@
-export type ResearchStatus = "Published" | "Preprint" | "Under Review" | "Research Project";
+export type ResearchStatus = "Accepted" | "Published" | "Preprint" | "Under Review" | "Research Project";
+export const researchStatusOrder: ResearchStatus[] = ["Accepted", "Published", "Preprint", "Under Review", "Research Project"];
 export type ResearchLinks = { paper?: string; code?: string; project?: string };
 
 export type ResearchProject = {
@@ -68,19 +69,26 @@ export const researchProjects: ResearchProject[] = [
   },
   {
     id: "sign-language",
-    title: "Vision–Text Alignment for Sign Language Translation",
+    title: "VTaMo: Video-Text Alignment Model for Sign Language Translation",
+    shortName: "VTaMo",
     description: "Research on explicit cross-modal alignment between visual sign-language sequences and language representations using entropy-regularized Optimal Transport. The work investigated visual-language correspondence and multimodal representation alignment.",
     affiliation: "NYU Abu Dhabi",
     year: 2026,
-    status: "Research Project",
-    authors: [],
+    status: "Accepted",
+    statusDetail: "Accepted at ECCV 2026",
+    authors: ["Junyi Hu", "Zhewen He", "Haomian Huang", "Aoxiang Yang", "Yi Fang"],
     image: "/projects/sign-language.png",
     imageAlt: "Research figure for visual-language correspondence using Optimal Transport",
     themes: ["Multimodal Learning", "Sign Language Translation", "Optimal Transport", "Vision-Language Alignment"],
-    links: {},
+    links: { paper: "https://arxiv.org/abs/2607.09126", code: "https://github.com/junyi2005/vtamo" },
     selected: true,
   },
 ];
+
+/** Accepted conference work leads the overview; preserve order within each status. */
+export const orderedResearchProjects = [...researchProjects].sort(
+  (first, second) => researchStatusOrder.indexOf(first.status) - researchStatusOrder.indexOf(second.status),
+);
 
 /** No submission links or author information may leak while double-blind is enabled. */
 export function publicResearchLinks(item: Pick<ResearchProject, "doubleBlind" | "links">): ResearchLinks {

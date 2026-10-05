@@ -5,7 +5,7 @@ import { StatusBadge } from "@/components/StatusBadge";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = { title: "Publications & Manuscripts", description: "Manuscripts and research records by Aoxiang (Aiden) Yang. Submission and publication statuses are explicitly distinguished." };
-const titles = { Published: "Published", Preprint: "Preprints", "Under Review": "Manuscripts under review", "Research Project": "Research projects" };
+const titles = { Accepted: "Accepted papers", Published: "Published", Preprint: "Preprints", "Under Review": "Manuscripts under review", "Research Project": "Research projects" };
 
 export default function PublicationsPage() {
   const entries = [...publications, ...researchRecords];

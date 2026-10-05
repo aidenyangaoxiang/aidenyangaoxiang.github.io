@@ -13,7 +13,7 @@ export const researchExperience: Experience[] = [
     organization: "NYU Abu Dhabi",
     role: "Visiting Research Assistant",
     period: "2026",
-    description: "Research in multimodal learning and sign language understanding, investigating visual-language correspondence and explicit cross-modal representation alignment using entropy-regularized Optimal Transport.",
+    description: "Research in multimodal learning and sign language understanding, investigating visual-language correspondence and explicit cross-modal representation alignment using entropy-regularized Optimal Transport. Co-author of VTaMo, accepted at ECCV 2026.",
   },
   // TODO: Add other research experiences with verified dates, affiliations, and roles.
 ];
