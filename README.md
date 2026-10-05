@@ -2,6 +2,10 @@
 
 Next.js App Router, TypeScript, and Tailwind CSS. An English academic website with Home, Research, Publications, Experience, and CV pages. The build produces a fully static `out/` directory; no database, API key, or server is required in production.
 
+Public website: [aidenyangaoxiang.github.io](https://aidenyangaoxiang.github.io/).
+Source repository: [aidenyangaoxiang/aidenyangaoxiang.github.io](https://github.com/aidenyangaoxiang/aidenyangaoxiang.github.io).
+GitHub Pages is enabled with the included Actions workflow. Push changes to `main` to build and deploy updates automatically. Review deployment progress in the repository's Actions tab.
+
 ## Run locally
 
 Use Node.js 22 or later (Node 24 is used by the included deployment workflow).

@@ -6,10 +6,10 @@ export const siteConfig = {
   role: "Undergraduate Researcher in AI",
   affiliation: "NYU Shanghai",
   email: "", // TODO: Your email address, without mailto:
-  githubUrl: "", // TODO: Your full GitHub profile URL
+  githubUrl: "https://github.com/aidenyangaoxiang", // Verified authenticated GitHub account
   scholarUrl: "", // TODO: Your full Google Scholar profile URL
   linkedinUrl: "", // TODO: Your full LinkedIn profile URL
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://aoxiang-yang-research.prime-loach-9536.chatgpt.site", // Override when moving to another host
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://aidenyangaoxiang.github.io", // GitHub Pages; override for another host
   cvPath: "/Aoxiang_Yang_CV.pdf",
   cvIsPlaceholder: true, // Set false after replacing the supplied placeholder PDF
   profileImage: "/profile.jpg", // Add your portrait to public/profile.jpg
